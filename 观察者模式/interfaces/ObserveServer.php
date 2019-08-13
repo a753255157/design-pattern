@@ -1,8 +1,14 @@
 <?php
 namespace interfaces;
 
-interface ObserveServer {
-    function attach(string $name, Observer $observer);
-    function detach(string $name, Observer $observer);
-    function notify();
+use interfaces\ObserveClient;
+
+interface ObserveServer
+{
+
+    public function attach(string $name, ObserveClient $observer);
+
+    public function detach(string $name, ObserveClient $observer);
+
+    public function notify();
 }

@@ -1,6 +1,8 @@
 <?php
 namespace interfaces;
 
-interface ObserveClient {
+interface ObserveClient
+{
+
     public function update();
 }

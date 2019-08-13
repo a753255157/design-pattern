@@ -1,7 +1,9 @@
 <?php
 use interfaces\ObserveServer;
 
-class Server implements ObserveServer {
+class Server implements ObserveServer
+{
+
     private $regists = [];
 
     public function attach($name, $obj)
@@ -16,7 +18,7 @@ class Server implements ObserveServer {
 
     public function notify()
     {
-        foreach($this->regists as $obj){
+        foreach ($this->regists as $obj) {
             $obj->update();
         }
     }
