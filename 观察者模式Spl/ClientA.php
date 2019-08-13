@@ -7,6 +7,6 @@ class ClientA implements SplObserver
 
     public function update(SplSubject $subject)
     {
-        echo "ClientA recived from $subject->name.\n";
+        echo "ClientA received from $subject->name.\n";
     }
 }
