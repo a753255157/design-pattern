@@ -12,6 +12,10 @@
   - `next()`：等价于 `send(null)`。
   - `getReturn()`：获取一个生成器内 `return` 语句返回的值。
   - `throw(Exception $e)`：手动引发生成器的一个异常。
+  - `key()`：返回生成器当前 `yield` 的 `key`，类似 `array` 的 `key`。
+  - `rewind()`：重置一个生成器。
+- `Task` 类用于包装单个 `Generator`，主要处理 `Generator` 执行时第一次产生的值，和之后生成值（send）的方式，及包装 `valid()`。
+- `Scheduler` 类用于调度 Task 类，借助 PHP 的 `SplQueue` 存放 Task，Task 出队列执行，如未执行完， Task 再放入队列。
 
 ##### send($value) 用法：
 
